@@ -1,6 +1,6 @@
-# data_dummy
+# news_flutter_data_newsapi
 
-Dummy data layer
+News API data layer to fetch News from NewsApi.com
 
 ## Getting Started
 
