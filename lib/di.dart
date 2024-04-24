@@ -3,10 +3,12 @@ import 'package:news_flutter_domain/NewsDI.dart';
 import 'package:news_flutter_domain/repo/news_repo.dart';
 
 class NewsApiDI extends NewsDI{
+  final String apiKey;
+  NewsApiDI({required this.apiKey});
 
   @override
   NewsRepo createNewsRepo() {
-    return NewsApiRepoImpl();
+    return NewsApiRepoImpl(apiKey:apiKey);
   }
 
 }
