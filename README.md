@@ -1,6 +1,6 @@
 # news_flutter_data_newsapi
 
-News api data layer to fetch News form NewsApi.com
+News API data layer to fetch News from NewsApi.com
 
 ## Getting Started
 
