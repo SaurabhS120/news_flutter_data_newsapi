@@ -18,7 +18,11 @@ class NewsApiRepoImpl implements NewsRepo{
   /// database call in order to fetch data
   @override
   Future<Either<List<NewsModel>,BaseError>> getNews() async{
-    final List<NewsModel> newsList = (await apiService.everything(q: 'tesla', from: '2024-03-24', sortBy: 'publishedAt', apiKey: apiKey)).transform();
+    DateTime dateTime = DateTime.now();
+    String dd = dateTime.day.toString().padLeft(2,'0');
+    String mm = (dateTime.month-1).toString().padLeft(2,'0');
+    String yyyy = dateTime.year.toString();
+    final List<NewsModel> newsList = (await apiService.everything(q: 'tesla', from: '$yyyy-$mm-$dd', sortBy: 'publishedAt', apiKey: apiKey)).transform();
     return Left(newsList);
   }
 }
